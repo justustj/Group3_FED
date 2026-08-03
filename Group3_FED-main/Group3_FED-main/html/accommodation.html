@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation | Just Travel</title>
+
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Sash/accommodation.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index:1050;">  
+    <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+
+      <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill"></div>
+      
+      <a href="../html/home.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2">Home</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="discover-menu">Discover Destinations</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="plan-menu">Plan Your Trip</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="booking-menu">Booking & Extras</a>
+    </div>
+  </nav>
+
+  <!-- Mega Menu Overlay -->
+  <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+    <div class="container-fluid pt-5 mt-5 text-white px-5">
+      
+      <!-- Discover Destinations -->
+      <div class="menu-category d-none" id="discover-menu">
+        <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+        <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+        <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+      </div>
+      
+      <!-- Plan Your Trip -->
+      <div class="menu-category d-none" id="plan-menu">
+        <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+        <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+        <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+      </div>
+
+      <!-- Booking & Extras -->
+      <div class="menu-category d-none" id="booking-menu">
+        <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+        <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+        <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Hero Section -->
+    <section class="accommodation-hero">
+        <div class="overlay">
+            <h1>Accommodation</h1>
+            <p>Find the best place to stay around the world</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        
+        <!-- USA Section -->
+        <section id="usa" class="mb-5">
+            <h2 class="mb-4 text-center">Accommodation in the USA</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/New York Hotel.jpg" alt="New York Hotel">
+                    <h3>New York Hotel</h3>
+                    <p>Luxury stay in the heart of Manhattan.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Times Square, NYC</p>
+                        <p>Amenities: Free WiFi, rooftop bar, fitness center.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/California Motel.jpg" alt="California Motel">
+                    <h3>California Motel</h3>
+                    <p>Affordable and convenient for road trips.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Santa Monica, California</p>
+                        <p>Amenities: Cozy rooms with free parking.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/Miami Resort.webp" alt="Miami Resort">
+                    <h3>Miami Resort</h3>
+                    <p>Beachfront resort with vibrant nightlife.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Miami, Florida</p>
+                        <p>Amenities: Beachfront property with pool, spa, and nightlife nearby.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Japan Section -->
+        <section id="japan" class="mb-5">
+            <h2 class="mb-4 text-center">Accommodation in Japan</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/japan-ryokan.jpg" alt="Traditional Ryokan">
+                    <h3>Traditional Ryokan</h3>
+                    <p>Experience tatami rooms and hot springs.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Found in Kyoto, Hakone, and rural towns.</p>
+                        <p>Amenities: Includes kaiseki meals, hot springs, and futon bedding.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/capsule-hotel.jpg" alt="Capsule Hotel">
+                    <h3>Capsule Hotel</h3>
+                    <p>Compact, modern, and budget-friendly.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Popular in Tokyo and Osaka</p>
+                        <p>Amenities: Compact pods with Wi-Fi, lockers, showers, and essentials for a budget stay.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/luxury-hotel.jpg" alt="Luxury Hotel">
+                    <h3>Luxury Hotel</h3>
+                    <p>High-rise hotel with city views.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Okinawa, Hokkaido ski resorts.</p>
+                        <p>Amenities: Offers spas, fine dining, and scenic views.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Switzerland Section -->
+        <section id="switzerland" class="mb-5">
+            <h2 class="mb-4 text-center">Accommodation in Switzerland</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/mountain-chalet.jpg" alt="Mountain Chalet">
+                    <h3>Mountain Chalet</h3>
+                    <p>Cozy stay with alpine views.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Found in Zermatt, Grindelwald, and Interlaken.</p>
+                        <p>Amenities: Fireplaces, mountain views, rustic charm.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/luxury-mountain-resort.jpg" alt="Luxury Mountain Resort">
+                    <h3>Luxury Mountain Resort</h3>
+                    <p>High-end resorts with spa and ski access.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Popular in St. Moritz and Davos.</p>
+                        <p>Amenities: Spas, fine dining, ski-in/ski-out convenience.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="../asset/Plan-your-trip/lakeside.jpg" alt="Lakeside Hotels">
+                    <h3>Lakeside Hotels</h3>
+                    <p>Elegant stays by Switzerland’s scenic lakes.</p>
+                    <button class="view-btn">View Details</button>
+                    <div class="details">
+                        <p>📍 Location: Found in Lucerne, Lake Geneva, and Zurich.</p>
+                        <p>Amenities: Waterfront views, terraces, boat access.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white mt-5">
+        <p class="mb-0">© 2026 Travel Website | Designed by Team</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/accomadation.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

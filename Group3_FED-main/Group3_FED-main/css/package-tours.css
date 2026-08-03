@@ -1,0 +1,42 @@
+/* Package Tours Custom Styles */
+
+/* Tour Cards Hover & Transition Effects */
+.tour-card .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.tour-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.tour-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tour-card .card:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+/* Custom Budget Range Slider Styling */
+#budgetRange {
+    cursor: pointer;
+}
+
+#budgetRange::-webkit-slider-thumb {
+    background-color: #0d6efd;
+}
+
+/* Comparison Table Styling */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}

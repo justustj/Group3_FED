@@ -1,0 +1,72 @@
+body, html {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: #f8f9fa; /* Light background to see the dark overlay */
+}
+
+/* Glass Pill Base */
+.glass-pill {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Sliding Indicator */
+.nav-indicator {
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    height: calc(100% - 8px);
+    top: 4px; 
+    left: 4px;
+    width: 0;
+    opacity: 0;
+}
+
+/* Custom Navbar Links Hover */
+.nav-item-custom {
+    transition: color 0.3s ease;
+}
+.nav-item-custom:hover {
+    color: #0473EA !important;
+}
+
+/* MEGA MENU OVERLAY (Crucial for the fade-in dropdown effect) */
+.mega-menu-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;               /* Hidden by default */
+    visibility: hidden;       /* Prevents accidental clicking when hidden */
+    transition: all 0.3s ease; /* Smooth fade in/out */
+    z-index: 1040;            /* Ensures it sits strictly UNDER the navbar (1050) */
+}
+
+/* When the JS adds 'show', the menu smoothly appears */
+.mega-menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mega Menu Links styling and sibling hover effect */
+.menu-category:hover .mega-link {
+    color: rgba(255, 255, 255, 0.3) !important; 
+}
+.mega-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.menu-category .mega-link:hover {
+    color: #0473EA !important;
+    opacity: 1;
+}
+.mega-menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+    /* Custom SVG 'X' Cursor */
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") 12 12, crosshair;
+}
+
+/* Ensure the links go back to the normal clicking hand */
+.menu-category a {
+    cursor: pointer;
+}
+
+
+

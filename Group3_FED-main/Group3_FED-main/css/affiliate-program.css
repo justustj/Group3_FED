@@ -1,0 +1,49 @@
+/* Affiliate Program Custom Styles */
+
+/* Interactive Earnings Calculator Card */
+.card#bookingSlider {
+    border-radius: 12px;
+}
+
+/* Earnings Slider Accent */
+#bookingSlider {
+    cursor: pointer;
+    height: 8px;
+}
+
+#bookingSlider::-webkit-slider-thumb {
+    background-color: #198754;
+    width: 20px;
+    height: 20px;
+}
+
+#monthlyEarningsDisplay {
+    font-size: 2.2rem;
+}
+
+/* Dashboard Preview Cards */
+.col-md-4 .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.col-md-4 .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* FAQ Accordion Polish */
+#affiliateFAQ .accordion-item {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+#affiliateFAQ .accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+#affiliateFAQ .accordion-button:focus {
+    box-shadow: none;
+}

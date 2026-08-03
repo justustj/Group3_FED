@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Traveling Guide | Just Travel</title>
+</head>
+<body>
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="../html/home.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="../html/accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="../html/food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="../html/transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="../html/affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="../html/package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="../html/trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+    
+    <header class="hero pt-5 mt-5"></header>
+
+    <section class="hero">
+
+    <div class="container text-center">
+
+    <h1 class="display-4 fw-bold">
+                        Solo Travelling Guide
+                    </h1>
+
+    <p>
+
+    Everything you need to travel confidently on your own.
+
+    </p>
+
+    </div>
+
+    </section>
+
+    <section class="py-5">
+
+    <div class="container">
+
+    <header class="mb-4 text-center">
+
+    <h2>
+
+    Choose Your Destination
+
+    </h2>
+
+    </header>
+
+    <div class="row justify-content-center">
+
+    <div class="col-lg-5">
+
+    <select
+    id="guideCountry"
+    class="form-select form-select-lg">
+
+    <option value="japan">
+
+    Japan
+
+    </option>
+
+    <option value="usa">
+
+    United States
+
+    </option>
+
+    <option value="switzerland">
+
+    Switzerland
+
+    </option>
+
+    </select>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    <section class="pb-5">
+
+    <div class="container">
+
+    <header class="mb-4">
+
+    <h2>
+
+    Travel Tips
+
+    </h2>
+
+    </header>
+
+    <article
+    id="tipsContainer"
+    class="row g-4">
+
+    <!-- JavaScript inserts cards -->
+
+    </article>
+
+    </div>
+
+    </section>
+
+    <section class="pb-5">
+
+    <div class="container">
+
+    <header class="mb-4">
+
+    <h2>
+
+    Packing Checklist
+
+    </h2>
+
+    </header>
+
+    <ul
+    class="list-group"
+    id="packingList">
+
+    <li class="list-group-item">
+
+    <input
+    type="checkbox">
+
+    Passport
+
+    </li>
+
+    <li class="list-group-item">
+
+    <input
+    type="checkbox">
+
+    Power Bank
+
+    </li>
+
+    <li class="list-group-item">
+
+    <input
+    type="checkbox">
+
+    Travel Insurance
+
+    </li>
+
+    <li class="list-group-item">
+
+    <input
+    type="checkbox">
+
+    Portable Charger
+
+    </li>
+
+    <li class="list-group-item">
+
+    <input
+    type="checkbox">
+
+    First Aid Kit
+
+    </li>
+
+    </ul>
+
+    </div>
+
+    </section>
+
+    <section class="pb-5">
+
+    <div class="container">
+
+    <header class="mb-4">
+
+    <h2>
+
+    Frequently Asked Questions
+
+    </h2>
+
+    </header>
+
+    <div
+    class="accordion"
+    id="faqAccordion">
+
+    <div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+    <button
+    class="accordion-button"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#faq1">
+
+    Is solo travelling safe?
+
+    </button>
+
+    </h2>
+
+    <div
+    id="faq1"
+    class="accordion-collapse collapse show">
+
+    <div class="accordion-body">
+
+    Stay aware of your surroundings,
+    share your itinerary with family,
+    and keep emergency contacts available.
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+    <button
+    class="accordion-button collapsed"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#faq2">
+
+    How much money should I bring?
+
+    </button>
+
+    </h2>
+
+    <div
+    id="faq2"
+    class="accordion-collapse collapse">
+
+    <div class="accordion-body">
+
+    Budget depends on your destination,
+    accommodation and activities.
+    Always keep an emergency fund.
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+    <button
+    class="accordion-button collapsed"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#faq3">
+
+    Should I buy travel insurance?
+
+    </button>
+
+    </h2>
+
+    <div
+    id="faq3"
+    class="accordion-collapse collapse">
+
+    <div class="accordion-body">
+
+    Yes.
+    Travel insurance protects you against
+    medical emergencies, cancellations
+    and lost luggage.
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    </main>
+
+       <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/solo-travelling-guide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

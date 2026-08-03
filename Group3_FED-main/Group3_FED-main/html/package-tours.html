@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Tours | Just Travel</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS (using relative paths from booking-and-extras/html/) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/package-tours.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index:1050;">  
+    <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+
+      <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill"></div>
+      
+      <a href="../html/home.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2">Home</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="discover-menu">Discover Destinations</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="plan-menu">Plan Your Trip</a>
+      <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2" data-menu="booking-menu">Booking & Extras</a>
+    </div>
+  </nav>
+
+  <!-- Mega Menu Overlay -->
+  <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+    <div class="container-fluid pt-5 mt-5 text-white px-5">
+      
+      <!-- Discover Destinations -->
+      <div class="menu-category d-none" id="discover-menu">
+        <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+        <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+        <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+      </div>
+      
+      <!-- Plan Your Trip -->
+      <div class="menu-category d-none" id="plan-menu">
+        <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+        <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+        <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+      </div>
+
+      <!-- Booking & Extras -->
+      <div class="menu-category d-none" id="booking-menu">
+        <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+        <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+        <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Main Content Container (pt-5 ensures content sits nicely below fixed navbar) -->
+    <main class="container my-5 pt-5">
+        <h1 class="mb-4 fw-bold">📦 Package Tours</h1>
+
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <aside class="col-md-3 mb-4">
+                <div class="card p-3 shadow-sm bg-light border-0">
+                    <h5 class="fw-bold mb-3">Filter Tours</h5>
+                    
+                    <!-- Keyword Search -->
+                    <div class="mb-3">
+                        <label for="searchInput" class="form-label">Search</label>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search region or keyword...">
+                    </div>
+
+                    <!-- Region Select Dropdown -->
+                    <div class="mb-3">
+                        <label for="regionSelect" class="form-label">Region</label>
+                        <select id="regionSelect" class="form-select">
+                            <option value="all">All Regions</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="north-america">North America</option>
+                            <option value="south-america">South America</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania / Pacific</option>
+                        </select>
+                    </div>
+
+                    <!-- Dynamic Max Budget Slider -->
+                    <div class="mb-3">
+                        <label for="budgetRange" class="form-label d-flex justify-content-between align-items-center">
+                            <span>Max Budget:</span>
+                            <strong class="text-primary">$<span id="budgetValue">2000</span></strong>
+                        </label>
+                        
+                        <input type="range" class="form-range" id="budgetRange" min="500" max="2000" step="50" value="2000">
+                        
+                        <div class="d-flex justify-content-between text-muted small">
+                            <span>$500</span>
+                            <span>$2000</span>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- Tour Cards Grid -->
+            <section class="col-md-9">
+                <div class="row g-4" id="tourCardsContainer">
+                    
+                    <!-- Japan -->
+                    <div class="col-md-4 tour-card" data-region="asia" data-price="1290" data-title="japan">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Japan Tour">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">7-Day Japan Exploration</h5>
+                                <p class="card-text text-warning mb-2">★ 4.8 / 5 (212 reviews)</p>
+                                <p class="fw-bold fs-5 text-dark">$1,290</p>
+                                <button class="btn btn-primary w-100">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bali -->
+                    <div class="col-md-4 tour-card" data-region="asia" data-price="850" data-title="bali">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Bali Tour">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">5-Day Bali Getaway</h5>
+                                <p class="card-text text-warning mb-2">★ 4.5 / 5 (113 reviews)</p>
+                                <p class="fw-bold fs-5 text-dark">$850</p>
+                                <button class="btn btn-primary w-100">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Switzerland -->
+                    <div class="col-md-4 tour-card" data-region="europe" data-price="1800" data-title="switzerland">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Swiss Tour">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">6-Day Swiss Alps Tour</h5>
+                                <p class="card-text text-warning mb-2">★ 4.9 / 5 (312 reviews)</p>
+                                <p class="fw-bold fs-5 text-dark">$1,800</p>
+                                <button class="btn btn-primary w-100">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Tour Comparison Table -->
+        <h2 class="mb-3 fw-bold">Tour Comparison</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center shadow-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Package Name</th>
+                        <th>Duration</th>
+                        <th>Inclusions</th>
+                        <th>Group Size</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7-Day Japan Exploration</td>
+                        <td>7 Days / 6 Nights</td>
+                        <td>Hotel, Bullet Train, Guide</td>
+                        <td>Max 15</td>
+                        <td class="fw-bold">$1,290</td>
+                    </tr>
+                    <tr>
+                        <td>5-Day Bali Getaway</td>
+                        <td>5 Days / 4 Nights</td>
+                        <td>Resort, Breakfast, Airport Transfer</td>
+                        <td>Max 10</td>
+                        <td class="fw-bold">$850</td>
+                    </tr>
+                    <tr>
+                        <td>6-Day Swiss Alps Scenic Tour</td>
+                        <td>6 Days / 5 Nights</td>
+                        <td>Alpine Hotels, Swiss Pass, Breakfast</td>
+                        <td>Max 12</td>
+                        <td class="fw-bold">$1,800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <!-- Bootstrap & Custom Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/package-tours.js"></script>
+</body>
+</html>

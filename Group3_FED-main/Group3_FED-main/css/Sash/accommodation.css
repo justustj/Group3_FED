@@ -1,0 +1,106 @@
+/* ===========================
+   HERO SECTION
+=========================== */
+.accommodation-hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('../../asset/Plan-your-trip/acommodation-hero.jpg') center/cover no-repeat;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.accommodation-hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.accommodation-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   CARD GRID LAYOUT
+=========================== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   DETAILS BUTTON & TOGGLE
+=========================== */
+.view-btn {
+  background-color: #004080;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.view-btn:hover {
+  background-color: #002b55;
+}
+
+.details {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  background: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border-left: 3px solid #004080;
+}
+
+.details.show {
+  display: block;
+}

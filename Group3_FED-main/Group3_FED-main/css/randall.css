@@ -1,0 +1,422 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Trebuchet MS", Arial, sans-serif;
+    background:#ffffff;
+    color:#000;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    transition:.3s;
+}
+
+.navbar-brand{
+    font-size:1.7rem;
+    font-weight:bold;
+}
+
+.nav-link{
+    font-size:1rem;
+    margin-left:12px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#38D200 !important;
+}
+
+.nav-link.active{
+    color:#0473EA !important;
+    font-weight:bold;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    background:linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+
+    background-size:cover;
+    background-position:center;
+
+    padding:100px 0 50px;
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+    font-weight:bold;
+
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.input-group{
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+#searchInput{
+
+    height:55px;
+    font-size:17px;
+
+}
+
+.input-group-text{
+
+    background:white;
+
+}
+
+/* ===========================
+   DESTINATION CARDS
+=========================== */
+
+.destination-card{
+
+    border:none;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.destination-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.destination-card img{
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.destination-card .card-body{
+
+    padding:25px;
+
+}
+
+.destination-card h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+    color:#0473EA;
+
+}
+
+.destination-card p{
+
+    color:#555;
+
+    min-height:90px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary{
+
+    background:#0473EA;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:#38D200;
+
+}
+
+.btn-outline-primary{
+
+    border-color:#0473EA;
+
+    color:#0473EA;
+
+}
+
+.btn-outline-primary:hover{
+
+    background:#0473EA;
+
+    color:white;
+
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.bg-light{
+
+    background:#f8f9fa !important;
+
+}
+
+.bg-light h3{
+
+    margin-top:15px;
+
+    color:#0473EA;
+
+}
+
+.bg-light i{
+
+    transition:.3s;
+
+}
+
+.bg-light .col-lg-4:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0473EA;
+
+    color:white;
+
+    padding:30px 0;
+
+    text-align:center;
+
+}
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    color:#38D200;
+
+}
+
+
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.6s;
+
+}
+
+.fade-in.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width:992px){
+
+.hero{
+
+min-height:50vh;
+
+}
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.destination-card img{
+
+height:220px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.navbar-brand{
+
+font-size:1.3rem;
+
+}
+
+.hero{
+
+min-height:45vh;
+
+}
+
+.hero h1{
+
+font-size:1.8rem;
+
+}
+
+.destination-card img{
+
+height:180px;
+
+}
+
+}
+/* SOLO GUIDE */
+
+#packingList li{
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+}
+
+#packingList li:hover{
+
+    background:#f8f9fa;
+
+}
+
+#packingList input{
+
+    margin-right:10px;
+
+}
+
+.country-btn{
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.country-btn:hover{
+
+    transform:translateX(8px);
+
+}
+
+.country-btn.active{
+
+    background:#0d6efd;
+
+    color:white;
+
+    border-color:#0d6efd;
+
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+footer{
+    margin-top:auto;
+}
+
+
+
