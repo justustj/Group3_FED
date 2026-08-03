@@ -1,0 +1,114 @@
+/* Affiliate Program Custom Styles */
+
+
+/* Interactive Earnings Calculator Card */
+.card#bookingSlider {
+    border-radius: 12px;
+}
+
+/* Interactive Earnings Calculator Range Slider (Line & Handle) */
+#bookingSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px; /* Height of the line/track */
+    background: #cbd5e1; /* Visible line track color */
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+/* Chrome, Safari, Edge Track Styling */
+#bookingSlider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* Firefox Track Styling */
+#bookingSlider::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* Chrome, Safari, Edge Thumb (Circular Handle) */
+#bookingSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #198754;
+    cursor: pointer;
+    margin-top: -7px; /* Aligns thumb directly on top of the 8px track */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease;
+}
+
+#bookingSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Firefox Thumb */
+#bookingSlider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #198754;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#monthlyEarningsDisplay {
+    font-size: 2.2rem;
+}
+
+/* Dashboard Preview Cards */
+.col-md-4 .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.col-md-4 .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* FAQ Accordion Polish */
+#affiliateFAQ .accordion-item {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+#affiliateFAQ .accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+#affiliateFAQ .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Mega Menu Overlay Link Styling */
+.mega-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* Semi-transparent white default */
+    text-decoration: none !important;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Turns bright blue on hover */
+.mega-link:hover {
+    color: #3b82f6 !important; /* Bright blue color */
+    text-decoration: none !important;
+}
+
+/* Optional: Active link / selected page state */
+.mega-link.active {
+    color: #3b82f6 !important;
+}

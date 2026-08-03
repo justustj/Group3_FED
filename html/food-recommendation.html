@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendation | Just Travel</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/food-recommendation.css">
+</head>
+<body>
+
+  <!-- Navbar (z-index 1050 keeps it above the menu) -->
+  <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+      <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+          
+          <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+          
+          <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+          <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+          <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+          <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+      </div>
+  </nav>
+
+  <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+  <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+      <div class="container-fluid pt-5 mt-5 text-white px-5">
+          
+          <!-- Discover Destinations -->
+          <div class="menu-category d-none" id="discover-menu">
+              <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+              <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+              <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+          </div>
+          
+          <!-- Plan Your Trip -->
+          <div class="menu-category d-none" id="plan-menu">
+              <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+              <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+              <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+          </div>
+
+          <!-- Booking & Extras -->
+          <div class="menu-category d-none" id="booking-menu">
+              <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+              <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+              <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero food-hero">
+    <div class="overlay text-center">
+      <h1 class="fw-bold">Culinary Encounters</h1>
+      <p>Discover iconic flavors & top dining spots worldwide</p>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container py-5">
+    
+    <!-- Category Filter Buttons -->
+    <div class="filter-wrapper d-flex justify-content-center gap-2 mb-5">
+      <button class="btn filter-btn active" data-filter="all">All Dishes</button>
+      <button class="btn filter-btn" data-filter="usa">USA</button>
+      <button class="btn filter-btn" data-filter="japan">Japan</button>
+      <button class="btn filter-btn" data-filter="switzerland">Switzerland</button>
+    </div>
+
+    <!-- Static Food Grid -->
+    <div class="food-grid" id="foodGrid">
+      
+      <!-- USA Card -->
+      <div class="food-card-item" data-country="usa">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+          <div class="img-wrapper mb-3 position-relative">
+            <img src="../asset/Plan-your-trip/usa-food.png" alt="USA Burger" class="img-fluid rounded-3">
+            <span class="country-tag position-absolute top-0 end-0 bg-danger text-white px-3 py-1 rounded-pill m-2 fw-bold small">USA 🇺🇸</span>
+          </div>
+          <h3 class="fw-bold text-dark">Popular Dishes</h3>
+          <div class="dish-tags d-flex flex-wrap justify-content-center gap-1 my-2">
+            <span class="badge text-bg-light border">Burgers</span>
+            <span class="badge text-bg-light border">BBQ Ribs</span>
+            <span class="badge text-bg-light border">NY Pizza</span>
+          </div>
+          <hr class="my-3 opacity-25">
+          <h5 class="fw-bold text-primary mb-2">Where to Eat</h5>
+          <p class="mb-1 text-secondary">📍 <strong>Joe’s Grill</strong> – New York</p>
+          <p class="text-secondary">📍 <strong>Texas BBQ House</strong> – Dallas</p>
+        </div>
+      </div>
+
+      <!-- Japan Card -->
+      <div class="food-card-item" data-country="japan">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+          <div class="img-wrapper mb-3 position-relative">
+            <img src="../asset/Plan-your-trip/japan-food.png" alt="Japan Sushi" class="img-fluid rounded-3">
+            <span class="country-tag position-absolute top-0 end-0 bg-danger text-white px-3 py-1 rounded-pill m-2 fw-bold small">Japan 🇯🇵</span>
+          </div>
+          <h3 class="fw-bold text-dark">Must-Try Foods</h3>
+          <div class="dish-tags d-flex flex-wrap justify-content-center gap-1 my-2">
+            <span class="badge text-bg-light border">Sushi</span>
+            <span class="badge text-bg-light border">Ramen</span>
+            <span class="badge text-bg-light border">Takoyaki</span>
+          </div>
+          <hr class="my-3 opacity-25">
+          <h5 class="fw-bold text-primary mb-2">Where to Eat</h5>
+          <p class="mb-1 text-secondary">📍 <strong>Ichiran Ramen</strong> – Tokyo</p>
+          <p class="text-secondary">📍 <strong>Tsukiji Market</strong> – Tokyo</p>
+        </div>
+      </div>
+
+      <!-- Switzerland Card -->
+      <div class="food-card-item" data-country="switzerland">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+          <div class="img-wrapper mb-3 position-relative">
+            <img src="../asset/Plan-your-trip/swiss-food.png" alt="Swiss Fondue" class="img-fluid rounded-3">
+            <span class="country-tag position-absolute top-0 end-0 bg-danger text-white px-3 py-1 rounded-pill m-2 fw-bold small">Swiss 🇨🇭</span>
+          </div>
+          <h3 class="fw-bold text-dark">Swiss Delicacies</h3>
+          <div class="dish-tags d-flex flex-wrap justify-content-center gap-1 my-2">
+            <span class="badge text-bg-light border">Cheese Fondue</span>
+            <span class="badge text-bg-light border">Raclette</span>
+            <span class="badge text-bg-light border">Swiss Chocolate</span>
+          </div>
+          <hr class="my-3 opacity-25">
+          <h5 class="fw-bold text-primary mb-2">Where to Eat</h5>
+          <p class="mb-1 text-secondary">📍 <strong>Swiss Chalet</strong> – Zurich</p>
+          <p class="text-secondary">📍 <strong>Alpine Lodge</strong> – Interlaken</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-dark text-white p-4 mt-5 text-center">
+      <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/Food.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

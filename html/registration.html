@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Just Travel</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons for Ticks/Crosses -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registration.css">
+</head>
+<body>
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Welcome Overlay (Hidden by default) -->
+    <div id="welcome-overlay" class="welcome-overlay" aria-hidden="true">
+        <h1 id="welcome-text" class="display-1 fw-bold text-white text-center shadow-lg p-5 rounded-4 glass-panel">
+            <!-- Injected via JS -->
+        </h1>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container mt-5 pt-5 mb-5 max-w-700">
+        
+        <header class="text-center mb-5 mt-4">
+            <h1 class="fw-bold display-5 text-dark mb-3">Join the Adventure</h1>
+            <p class="fs-5 text-muted">Create an account to book tickets and leave reviews.</p>
+        </header>
+
+        <!-- Registration Form -->
+        <section class="bg-white p-4 p-md-5 rounded-4 shadow-sm border mb-5">
+            <form id="registrationForm" novalidate>
+                
+                <div class="row g-3 mb-4">
+                    <!-- First Name -->
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label fw-semibold">First Name</label>
+                        <input type="text" class="form-control form-control-lg" id="firstName" required>
+                        <div class="invalid-feedback">First name cannot be empty.</div>
+                    </div>
+                    
+                    <!-- Last Name -->
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label fw-semibold">Last Name</label>
+                        <input type="text" class="form-control form-control-lg" id="lastName" required>
+                        <div class="invalid-feedback">Last name cannot be empty.</div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="form-label fw-semibold">Email Address</label>
+                    <input type="email" class="form-control form-control-lg" id="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                    <label for="password" class="form-label fw-semibold">Password</label>
+                    <input type="password" class="form-control form-control-lg" id="password" required>
+                    <div class="invalid-feedback" id="password-error">Please fix the password requirements below.</div>
+                    
+                    <!-- Dynamic Password Criteria -->
+                    <ul class="list-unstyled mt-3 p-3 bg-light rounded" id="password-criteria">
+                        <li id="req-length" class="text-danger mb-2">
+                            <i class="bi bi-x-circle-fill me-2 icon-state"></i> At least 12 characters
+                        </li>
+                        <li id="req-number" class="text-danger">
+                            <i class="bi bi-x-circle-fill me-2 icon-state"></i> Contains at least one number
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dynamic Content / Filtering: Travel Interests -->
+                <div class="mb-4 p-4 border rounded bg-light">
+                    <label class="form-label fw-semibold">Where do you want to go? (Optional)</label>
+                    <input type="text" class="form-control mb-3" id="filterDestinations" placeholder="Filter destinations...">
+                    <ul class="list-group" id="destinationList">
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="Japan" id="dest1">
+                            <label class="form-check-label stretched-link" for="dest1">Japan</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="Iceland" id="dest2">
+                            <label class="form-check-label stretched-link" for="dest2">Iceland</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="Italy" id="dest3">
+                            <label class="form-check-label stretched-link" for="dest3">Italy</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="New Zealand" id="dest4">
+                            <label class="form-check-label stretched-link" for="dest4">New Zealand</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Terms Modal Trigger -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">
+                        I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>
+                    </label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold">Register Account</button>
+            </form>
+        </section>
+
+        <!-- Accordion: FAQs -->
+        <section class="mb-5" aria-label="Frequently Asked Questions">
+            <h3 class="fw-bold mb-3">Why create an account?</h3>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Faster Bookings
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Save your payment and passenger details securely to checkout in seconds.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Leave Reviews
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Help fellow travelers by rating your experiences and uploading photos of your trips.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>By creating an account, you agree to allow us to store your name, email, and travel preferences. We will not sell your data to third parties.</p>
+                    <p>You are responsible for keeping your password secure. We require strong passwords to protect your travel itineraries and payment methods.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark rounded-pill" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <!-- External JS & Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/registration.js"></script>
+</body>
+</html>

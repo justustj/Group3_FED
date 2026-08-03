@@ -1,0 +1,151 @@
+
+/* Override Bootstrap's muted text to keep it in the black family (just lowered opacity) */
+.text-muted {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.max-w-700 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Ensure the form container pops slightly on the white background */
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* =========================================
+   LINKS & BUTTONS
+   ========================================= */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-green);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+/* Button hovers to your contrasting green */
+.btn-primary:hover, 
+.btn-primary:focus {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(56, 210, 0, 0.3);
+}
+
+.btn-dark {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+/* =========================================
+   FORM CONTROLS & VALIDATION
+   ========================================= */
+.form-control {
+  color: var(--color-black);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.25rem rgba(4, 115, 234, 0.25);
+}
+
+/* Overriding Bootstrap's default valid state with your custom Green */
+.text-success {
+  color: var(--primary-green) !important;
+}
+
+.form-control.is-valid, 
+.was-validated .form-control:valid {
+  border-color: var(--primary-green);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2338D200' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.form-control.is-valid:focus, 
+.was-validated .form-control:valid:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.25rem rgba(56, 210, 0, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+/* =========================================
+   ACCORDION STYLING
+   ========================================= */
+.accordion-button {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-blue);
+  background-color: rgba(4, 115, 234, 0.1);
+}
+
+.accordion-button:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.25rem rgba(4, 115, 234, 0.25);
+}
+
+/* =========================================
+   FULL SCREEN WELCOME OVERLAY
+   ========================================= */
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Striking gradient using both your primary colors */
+  background: linear-gradient(135deg, rgba(4, 115, 234, 0.95), rgba(56, 210, 0, 0.95));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Hidden states */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.welcome-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Glassmorphism panel for the welcome text */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  color: var(--color-white) !important;
+  transform: scale(0.8);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.welcome-overlay.show .glass-panel {
+  transform: scale(1);
+}

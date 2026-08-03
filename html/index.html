@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Just Travel</title>
+</head>
+<body>
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="container my-5">
+        <!-- Hook & Gif Section -->
+        <section class="hero-banner rounded-4 mb-5 position-relative overflow-hidden" aria-label="Hero Content">
+            <!-- Background GIF/Video element -->
+            <video autoplay muted loop playsinline class="hero-bg-video">
+                <source src="../asset/getting-started/ezgif-1eeefc2b83904906.gif" type="video/mp4">
+                <!-- Fallback or if using an actual .gif file, you can switch this to an <img> tag -->
+                Your browser does not support HTML5 video.
+            </video>
+            
+            <!-- Dark Overlay for text readability (optional, like Vessi style) -->
+            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+            <!-- Content Container -->
+            <div class="container position-relative z-2 py-5">
+                <div class="row align-items-center min-vh-50">
+                    <!-- Hook Words on the Left -->
+                    <div class="col-lg-6 text-white py-5">
+                        <article class="hook-content">
+                            <h1 class="display-4 fw-bold mb-3">Weather-free travel days ahead</h1>
+                            <p class="lead mb-4">100% waterproof, lightweight, and ready for any destination.</p>
+                            <a href="#destinations-heading" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark">Explore Now</a>
+                        </article>
+                    </div>
+                    <!-- Right side is left empty as it serves as the moving background showcase -->
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Navigation -->
+        <nav class="tabs-wrapper mb-4" id="filter-tabs" aria-label="Content Filter Navigation">
+            <button class="pill-btn active" aria-pressed="true">Destinations</button>
+            <button class="pill-btn" aria-pressed="false">Transport</button>
+        </nav>
+
+        <!-- Destinations Scroll Section -->
+        <section class="destinations-section mb-5" aria-labelledby="destinations-heading">
+            <header>
+                <h2 id="destinations-heading" class="fw-bold mb-4">Destinations</h2>
+            </header>
+            
+            <div class="cards-scroll-container pb-2" id="destinations-scroll" role="region" aria-label="Horizontal scroll of destinations">
+                <article class="country-card" tabindex="0">
+                    <h3 class="fs-4 m-0">Country A</h3>
+                </article>
+                <article class="country-card" tabindex="0">
+                    <h3 class="fs-4 m-0">Country B</h3>
+                </article>
+                <article class="country-card" tabindex="0">
+                    <h3 class="fs-4 m-0">Country C</h3>
+                </article>
+                <article class="country-card" tabindex="0">
+                    <h3 class="fs-4 m-0">Country D</h3>
+                </article>
+                <article class="country-card" tabindex="0">
+                    <h3 class="fs-4 m-0">Country E</h3>
+                </article>
+            </div>
+
+            <footer class="reviews-bar mt-4 pt-3">
+                <button class="scroll-arrow btn btn-link text-decoration-none text-dark p-0" id="scroll-left" aria-label="Scroll left">&larr;</button>
+                <span>Reviews</span>
+                <button class="scroll-arrow btn btn-link text-decoration-none text-dark p-0" id="scroll-right" aria-label="Scroll right">&rarr;</button>
+            </footer>
+        </section>
+
+        <!-- Discover Destinations Section -->
+        <section class="split-section row align-items-center mb-5" aria-labelledby="discover-heading">
+            <div class="split-content col-md-6 mb-4 mb-md-0">
+                <header>
+                    <span class="section-subtitle">Discover Destinations</span>
+                </header>
+                <ul class="large-list interactive-list m-0 p-0" role="listbox">
+                    <li class="active" role="option" aria-selected="true" tabindex="0">Destinations</li>
+                    <li role="option" aria-selected="false" tabindex="0">Attractions</li>
+                    <li role="option" aria-selected="false" tabindex="0">Solo Traveling Guide</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <figure class="split-image m-0">
+                    <figcaption>Picture Placeholder</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Plan Your Trip Section -->
+        <section class="split-section row flex-row-reverse align-items-center mb-5" aria-labelledby="plan-heading">
+            <div class="split-content col-md-6 mb-4 mb-md-0">
+                <header>
+                    <span class="section-subtitle">Plan Your Trip</span>
+                </header>
+                <ul class="large-list interactive-list m-0 p-0" role="listbox">
+                    <li class="active" role="option" aria-selected="true" tabindex="0">Accommodation</li>
+                    <li role="option" aria-selected="false" tabindex="0">Food Recommendations</li>
+                    <li role="option" aria-selected="false" tabindex="0">Transport</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <figure class="split-image m-0">
+                    <figcaption>Picture Placeholder</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Program | Just Travel</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Stylesheets (3 levels up from booking-and-extras/html/) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/affiliate-program.css">
+</head>
+<body>
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container my-5 pt-5 text-center">
+        <h1 class="fw-bold">Join our Travel Partner Network</h1>
+        <p class="text-muted fs-5">Earn competitive commissions by referring travelers to our tours and services.</p>
+
+        <!-- Earnings Calculator Slider -->
+        <div class="card p-4 my-4 bg-light shadow-sm border-0 mx-auto" style="max-width: 650px;">
+            <h4 class="fw-bold">Interactive Earnings Calculator</h4>
+            <label for="bookingSlider" class="form-label mt-3 fs-5">Drag Monthly Referred Bookings: <strong id="sliderBookingCount">10</strong></label>
+            <input type="range" class="form-range" id="bookingSlider" min="1" max="1000" value="10">
+            
+            <div class="d-flex justify-content-between text-muted small px-2">
+                <span>0 bookings</span>
+                <span>1000 bookings</span>
+            </div>
+
+            <h3 class="mt-3 text-success fw-bold">Potential Monthly Earnings: $<span id="monthlyEarningsDisplay">80.00</span></h3>
+        </div>
+
+        <!-- Dashboard Preview Section -->
+        <div class="my-5">
+            <h3 class="fw-bold">Affiliate Dashboard View</h3>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 h-100">
+                        <h5 class="fw-bold">Current Earnings</h5>
+                        <p class="display-6 fw-bold text-primary">$1,240.00</p>
+                        <p class="text-muted small">Updated 2 hours ago</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 h-100">
+                        <h5 class="fw-bold">Conversion Rate</h5>
+                        <p class="display-6 fw-bold text-success">4.8%</p>
+                        <p class="text-muted small">Above average performance</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 h-100">
+                        <h5 class="fw-bold">Latest Signups</h5>
+                        <p class="display-6 fw-bold text-dark">38</p>
+                        <p class="text-muted small">New referrals this month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="text-start mt-5">
+            <h3 class="text-center mb-4 fw-bold">Frequently Asked Questions</h3>
+            <div class="accordion shadow-sm" id="affiliateFAQ">
+                
+                <div class="accordion-item border-0 mb-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How are commissions paid?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#affiliateFAQ">
+                        <div class="accordion-body">
+                            Commissions are calculated automatically at the end of every calendar month and transferred directly via Bank Transfer or PayPal once minimum thresholds ($50) are met.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What are the rules?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#affiliateFAQ">
+                        <div class="accordion-body">
+                            Partners must not post misleading advertisements or bid on trademarked keywords. All promotion methods must adhere to fair usage policies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            How do I start?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#affiliateFAQ">
+                        <div class="accordion-body">
+                            Simply fill in the registration form, receive your unique affiliate referral tracking link, and start sharing it across your blog, website, or social media!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <!-- Bootstrap & Custom Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/affiliate-program.js"></script>
+</body>
+</html>

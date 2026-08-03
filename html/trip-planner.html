@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner | Just Travel</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Stylesheets (3 levels up from booking-and-extras/html/) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/trip-planner.css">
+</head>
+<body>
+
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <main class="container my-5 pt-5">
+        <h1 class="mb-4 fw-bold">🗺️ Trip Planner</h1>
+
+        <!-- Section 1: Itinerary Builder & Cost Calculator -->
+        <h2 class="mb-3 fw-bold fs-3">1. Build Itinerary</h2>
+        
+        <div class="row">
+            <!-- Dynamic Itinerary Days -->
+            <div class="col-md-7">
+                <div id="itineraryContainer" class="mb-3">
+                    <div class="card p-3 mb-3 shadow-sm border-0">
+                        <h5 class="fw-bold">Day 1</h5>
+                        <input type="text" class="form-control mb-2" placeholder="Activity Title (e.g. City Tour)">
+                        <textarea class="form-control" rows="2" placeholder="Activity Description"></textarea>
+                    </div>
+                </div>
+                <button id="addDayBtn" class="btn btn-secondary mb-4">+ Add Activity Day</button>
+            </div>
+
+            <!-- Real-time Cost Calculator -->
+            <div class="col-md-5">
+                <div class="card p-4 bg-light shadow-sm border-0">
+                    <h4 class="fw-bold mb-3">Cost Calculator</h4>
+                    <div class="mb-3">
+                        <label for="paxInput" class="form-label">Flight ($45.50 / pax)</label>
+                        <input type="number" id="paxInput" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="hotelInput" class="form-label">Hotel ($15.50 / night)</label>
+                        <input type="number" id="hotelInput" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="activitiesInput" class="form-label">Activities ($19.00 / activity)</label>
+                        <input type="number" id="activitiesInput" class="form-control" value="1" min="1">
+                    </div>
+                    <hr>
+                    <h3 class="fw-bold">TOTAL: $<span id="totalCostDisplay">80.00</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Section 2: Booking Form with JS Validation -->
+        <h2 class="mb-3 fw-bold fs-3">2. Your Booking Details</h2>
+        <form id="bookingForm" class="card p-4 shadow-sm border-0 mt-3" novalidate>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+                    <div class="invalid-feedback">Please provide your full name.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" required pattern="[0-9]{8,15}">
+                    <div class="invalid-feedback">Please provide a valid contact number (8-15 digits).</div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="destinationSelect" class="form-label">Destination Selection</label>
+                <select class="form-select" id="destinationSelect" required>
+                    <option value="" selected disabled>Choose destination...</option>
+                    <option value="japan">Japan</option>
+                    <option value="bali">Bali</option>
+                    <option value="switzerland">Switzerland</option>
+                </select>
+                <div class="invalid-feedback">Please select a destination.</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="startDate" class="form-label">Start Travel Date</label>
+                    <input type="date" class="form-control" id="startDate" required>
+                    <div class="invalid-feedback">Please select a start date.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="endDate" class="form-label">End Travel Date</label>
+                    <input type="date" class="form-control" id="endDate" required>
+                    <div class="invalid-feedback" id="endDateFeedback">End date must be after start date.</div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="specialRequests" class="form-label">Special Requests</label>
+                <textarea class="form-control" id="specialRequests" rows="3" placeholder="Special requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100 py-2 fw-bold">VALIDATE & SUBMIT</button>
+            <div id="bookingSuccessAlert" class="alert alert-success mt-3 d-none">Booking submitted successfully!</div>
+        </form>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <!-- Bootstrap & Custom Scripts (In Correct Execution Order) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/trip-planner.js"></script>
+</body>
+</html>

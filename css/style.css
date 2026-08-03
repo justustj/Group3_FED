@@ -1,0 +1,62 @@
+        
+    :root {
+      --primary-blue: #0473EA;
+      --primary-green: #38D200;
+      --color-white: #ffffff;
+      --color-black: #000000;
+    }
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+    body {
+      background: url('placeholder-image.jpg') no-repeat center center fixed; /* Placeholder */
+      background-size: cover;
+    }
+
+    .glass-pill {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .mega-link {
+      color: var(--color-white) !important;
+      text-decoration: none;
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+    .menu-category:hover .mega-link {
+      opacity: 0.3; 
+    }
+
+    /* 3. Active hover state: The specific link being hovered turns green and full opacity */
+    .menu-category .mega-link:hover {
+      color: var(--primary-green) !important;
+      opacity: 1;
+    }
+
+    /* Ensure the links show the normal clicking hand cursor */
+    .menu-category a {
+      cursor: pointer;
+    }
+    .nav-indicator {
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      height: calc(100% - 8px);
+      top: 4px; 
+      left: 4px;
+      width: 0;
+      opacity: 0;
+    }
+
+    .mega-menu-overlay {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1040; /* Just below Bootstrap's modal z-index */
+    }
+
+    .mega-menu-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }

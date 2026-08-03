@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reviews.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Just Travel</title>
+</head>
+<body>
+    <!-- Navbar (z-index 1050 keeps it above the menu) -->
+    <nav class="navbar fixed-top p-4 d-flex justify-content-between align-items-start" style="z-index: 1050;">  
+        <div class="nav-links-container position-relative bg-dark bg-opacity-25 rounded-pill p-1 d-flex glass-pill shadow-sm">
+            
+            <div id="nav-indicator" class="nav-indicator position-absolute bg-white bg-opacity-25 rounded-pill z-1"></div>
+            
+            <a href="index.html" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2">Home</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="discover-menu">Discover Destinations</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="plan-menu">Plan Your Trip</a>
+            <a href="#" class="nav-link nav-item-custom text-white fw-bold px-4 py-2 position-relative z-2" data-menu="booking-menu">Booking & Extras</a>
+        </div>
+    </nav>
+
+    <!-- Mega Menu Overlay (REMOVED d-none, relying on custom CSS .show class for smooth transition) -->
+    <div class="mega-menu-overlay position-fixed top-0 start-0 w-100 vh-100 bg-dark bg-opacity-75" id="mega-menu">
+        
+        <div class="container-fluid pt-5 mt-5 text-white px-5">
+            
+            <!-- Discover Destinations -->
+            <div class="menu-category d-none" id="discover-menu">
+                <a href="attractions.html" class="mega-link display-3 fw-bold mb-3 d-block">Attractions</a>
+                <a href="destinations.html" class="mega-link display-3 fw-bold mb-3 d-block">Destinations</a>
+                <a href="solo-travelling-guide.html" class="mega-link display-3 fw-bold mb-3 d-block">Solo Travelling Guide</a>
+            </div>
+            
+            <!-- Plan Your Trip -->
+            <div class="menu-category d-none" id="plan-menu">
+                <a href="accommodation.html" class="mega-link display-3 fw-bold mb-3 d-block">Accommodation</a>
+                <a href="food-recommendation.html" class="mega-link display-3 fw-bold mb-3 d-block">Food Recommendation</a>
+                <a href="transport.html" class="mega-link display-3 fw-bold mb-3 d-block">Transport</a>
+            </div>
+
+            <!-- Booking & Extras -->
+            <div class="menu-category d-none" id="booking-menu">
+                <a href="affiliate-program.html" class="mega-link display-3 fw-bold mb-3 d-block">Affiliate Program</a>
+                <a href="package-tours.html" class="mega-link display-3 fw-bold mb-3 d-block">Package Tours</a>
+                <a href="trip-planner.html" class="mega-link display-3 fw-bold mb-3 d-block">Trip Planner</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <main class="container my-5 pt-4">
+
+        <!-- Header Section -->
+        <header class="text-center mb-5">
+            <h1 class="fw-bold display-5 text-dark mb-3">What They're Saying About Us</h1>
+            <p class="fs-5 text-muted">Scroll for honest thoughts about our fully waterproof shoes.</p>
+        </header>
+
+        <!-- Rating Summary Section -->
+        <section class="row justify-content-center align-items-center mb-4" aria-label="Overall Rating Summary">
+            <!-- Left: Big Number & Stars -->
+            <div class="col-md-3 text-center text-md-start mb-4 mb-md-0 d-flex flex-column align-items-md-center">
+            <h2 class="display-3 fw-bold mb-0">4.68</h2>
+            <div class="text-brand-blue fs-4 mb-1" aria-hidden="true">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="text-muted small">119,380 reviews</span>
+            </div>
+
+            <!-- Right: Progress Bars (Converted to a semantic list) -->
+            <ul class="col-md-5 list-unstyled mb-0">
+            <li class="d-flex align-items-center mb-2">
+                <span class="me-2 small fw-medium">5</span>
+                <div class="progress flex-grow-1" style="height: 8px;" role="progressbar" aria-label="5 stars" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-brand-blue" style="width: 75%"></div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+                <span class="me-2 small fw-medium">4</span>
+                <div class="progress flex-grow-1" style="height: 8px;" role="progressbar" aria-label="4 stars" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-brand-blue" style="width: 15%"></div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+                <span class="me-2 small fw-medium">3</span>
+                <div class="progress flex-grow-1" style="height: 8px;" role="progressbar" aria-label="3 stars" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-brand-blue" style="width: 5%"></div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+                <span class="me-2 small fw-medium">2</span>
+                <div class="progress flex-grow-1" style="height: 8px;" role="progressbar" aria-label="2 stars" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-brand-blue" style="width: 2%"></div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+                <span class="me-2 small fw-medium">1</span>
+                <div class="progress flex-grow-1" style="height: 8px;" role="progressbar" aria-label="1 star" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-brand-blue" style="width: 3%"></div>
+                </div>
+            </li>
+            </ul>
+        </section>
+
+        <!-- Separator -->
+        <hr class="mb-5 border-secondary opacity-25">
+
+        <!-- Review Cards Section -->
+        <section class="row g-4 mb-5" aria-label="Customer Reviews">
+            
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+            <article class="card review-card h-100 border-0 p-3">
+                <div class="card-body d-flex flex-column">
+                
+                <header class="d-flex justify-content-between align-items-start mb-2">
+                    <span class="fw-bold">Michelle D <i class="bi bi-patch-check-fill text-brand-blue ms-1" aria-label="Verified Purchase"></i></span>
+                    <time class="text-muted small" datetime="PT6H">6 hours ago</time>
+                </header>
+                
+                <div class="text-brand-blue mb-2" aria-label="4 out of 5 stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                
+                <h5 class="card-title fw-bold">Comfortable and quality</h5>
+                <p class="card-text flex-grow-1">Comfortable and quality</p>
+                
+                <footer class="mt-auto">
+                    <p class="text-muted small mb-4">Review for Women's Stormburst Low Top - White - White / 7 from Vessi Canada</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-outline-dark btn-sm rounded-pill recommend-btn">
+                        <i class="bi bi-heart-fill me-1"></i> WOULD RECOMMEND
+                    </button>
+                    <div role="group" aria-label="Helpful vote">
+                        <i class="bi bi-hand-thumbs-up me-2 action-icon" tabindex="0" role="button"></i>
+                        <i class="bi bi-hand-thumbs-down action-icon" tabindex="0" role="button"></i>
+                    </div>
+                    </div>
+                </footer>
+                
+                </div>
+            </article>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+            <article class="card review-card h-100 border-0 p-3">
+                <div class="card-body d-flex flex-column">
+                
+                <header class="d-flex justify-content-between align-items-start mb-2">
+                    <span class="fw-bold">Rajen p <i class="bi bi-patch-check-fill text-brand-blue ms-1" aria-label="Verified Purchase"></i></span>
+                    <time class="text-muted small" datetime="PT10H">10 hours ago</time>
+                </header>
+                
+                <div class="text-brand-blue mb-2" aria-label="5 out of 5 stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                
+                <h5 class="card-title fw-bold">MyVessi</h5>
+                <p class="card-text">Love the comfort of my Vessi. Super lightweight. 👌 Very easy to put on/off. 👍 Have 3 pairs!! Use i...</p>
+                
+                <!-- Image Placeholder converted to semantic figure/imgs -->
+                <figure class="d-flex gap-2 mb-3 m-0">
+                    <img src="#" alt="Customer photo 1" class="bg-secondary bg-opacity-25 rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                    <img src="#" alt="Customer photo 2" class="bg-secondary bg-opacity-25 rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                </figure>
+
+                <footer class="mt-auto">
+                    <p class="text-muted small mb-4">Review for Men's Boardwalk Slip-On - Plasma/Selene / 9</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-outline-dark btn-sm rounded-pill recommend-btn">
+                        <i class="bi bi-heart-fill me-1"></i> WOULD RECOMMEND
+                    </button>
+                    <div role="group" aria-label="Helpful vote">
+                        <i class="bi bi-hand-thumbs-up me-2 action-icon" tabindex="0" role="button"></i>
+                        <i class="bi bi-hand-thumbs-down action-icon" tabindex="0" role="button"></i>
+                    </div>
+                    </div>
+                </footer>
+                
+                </div>
+            </article>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+            <article class="card review-card h-100 border-0 p-3">
+                <div class="card-body d-flex flex-column">
+                
+                <header class="d-flex justify-content-between align-items-start mb-2">
+                    <span class="fw-bold">John Doe <i class="bi bi-patch-check-fill text-brand-blue ms-1" aria-label="Verified Purchase"></i></span>
+                    <time class="text-muted small" datetime="PT12H">12 hours ago</time>
+                </header>
+                
+                <div class="text-brand-blue mb-2" aria-label="5 out of 5 stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                
+                <h5 class="card-title fw-bold">What great shoes, they...</h5>
+                <p class="card-text flex-grow-1">What great shoes, they are perfect, comfortable and look super cool, I love them.</p>
+                
+                <footer class="mt-auto">
+                    <p class="text-muted small mb-4">Review for Men's Stormburst Low Top - White/Grey / 10 from Vessi Canada</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-outline-dark btn-sm rounded-pill recommend-btn">
+                        <i class="bi bi-heart-fill me-1"></i> WOULD RECOMMEND
+                    </button>
+                    <div role="group" aria-label="Helpful vote">
+                        <i class="bi bi-hand-thumbs-up me-2 action-icon" tabindex="0" role="button"></i>
+                        <i class="bi bi-hand-thumbs-down action-icon" tabindex="0" role="button"></i>
+                    </div>
+                    </div>
+                </footer>
+                
+                </div>
+            </article>
+            </div>
+
+        </section>
+
+        <!-- Call to Action Section (Bottom) -->
+        <section class="text-center mt-5 mb-5" aria-labelledby="cta-heading">
+            <h3 id="cta-heading" class="fw-bold mb-4">Let Us Know What You Think</h3>
+            <button id="registerBtn" class="btn btn-dark rounded-pill px-5 py-2 fs-5">Register</button>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-dark text-white p-4 mt-5 text-center">
+        <p class="mb-0">© 2026 JustTravel | Terms of Service | Privacy Policy</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/reviews.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

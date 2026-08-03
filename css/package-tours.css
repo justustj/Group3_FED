@@ -1,0 +1,99 @@
+/* Package Tours Custom Styles */
+
+/* Fix Mega Menu Overlay Links */
+.mega-link,
+.mega-link:hover,
+.mega-link:focus,
+.mega-link:active,
+.mega-link:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Tour Cards Hover & Transition Effects */
+.tour-card .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.tour-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.tour-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tour-card .card:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+/* Custom Budget Range Slider Styling */
+#budgetRange {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #cbd5e1; /* Visible line track */
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Chrome, Safari, Edge Track */
+#budgetRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+/* Firefox Track */
+#budgetRange::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+/* Handle / Thumb */
+#budgetRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    cursor: pointer;
+    margin-top: -6px; /* Aligns circle over the 6px track */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease;
+}
+
+#budgetRange::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+#budgetRange::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    cursor: pointer;
+    border: none;
+}
+
+/* Comparison Table Styling */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
